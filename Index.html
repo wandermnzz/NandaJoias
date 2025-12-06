@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contatos — Nanda Jóias</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 30px;
+      background: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+
+    .panel {
+      width: 100%;
+      max-width: 720px;
+      background: #000;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    /* LOGO */
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .logo-wrap {
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .logo-wrap img {
+      width: 70%;
+      height: auto;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    /* CONTATOS */
+    .contacts {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #000;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .name {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .phone {
+      color: #bbb;
+      font-size: 14px;
+    }
+
+    .note {
+      font-size: 13px;
+      margin-top: 6px;
+      color: #ccc;
+    }
+
+    .actions {
+      margin-top: 10px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn {
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 13px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-wa {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .btn-call {
+      background: rgba(255,255,255,0.10);
+      color: #fff;
+    }
+
+    @media (max-width: 640px) {
+      .contacts {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="panel">
+
+    <!-- LOGO -->
+    <div class="logo-area">
+      <div class="logo-wrap">
+        <img src="logo.png" alt="Logo Nanda Jóias">
+      </div>
+       </div>
+
+    <!-- CONTATOS -->
+    <section class="contacts">
+
+      <!-- Eduarda -->
+      <div class="card">
+        <div class="name">Atendente Eduarda</div>
+        <div class="phone">(79) 99960-3905</div>
+        <div class="actions">
+          <a class="btn btn-wa" href="#" data-phone="79999603905">WhatsApp</a>
+          <a class="btn btn-call" href="tel:+5579999603905">Ligar</a>
+        </div>
+      </div>
+
+      <!-- Emilly -->
+      <div class="card">
+        <div class="name">Atendente Emilly</div>
+        <div class="phone">(79) 99966-2154</div>
+        <div class="actions">
+          <a class="btn btn-wa" href="#" data-phone="79999662154">WhatsApp</a>
+          <a class="btn btn-call" href="tel:+557999662154">Ligar</a>
+        </div>
+      </div>
+
+      <!-- Roberta -->
+      <div class="card">
+        <div class="name">Atendente Roberta</div>
+        <div class="phone">(79) 99831-6428</div>
+        <div class="actions">
+          <a class="btn btn-wa" href="#" data-phone="79998316428">WhatsApp</a>
+          <a class="btn btn-call" href="tel:+5579998316428">Ligar</a>
+        </div>
+      </div>
+
+      <!-- FERNANDA - DONA -->
+      <div class="card">
+        <div class="name">Fernanda </div>
+        <div class="phone">(79) 99991-10560</div>
+        <div class="note">Dúvidas, reclamações ou sugestões</div>
+        <div class="actions">
+          <a class="btn btn-wa" href="#" data-phone="79999110560">WhatsApp</a>
+          <a class="btn btn-call" href="tel:+5579999110560">Ligar</a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    const msg = "Oi, vim pelo insta Nanda Jóias.";
+
+    document.querySelectorAll(".btn-wa").forEach(btn => {
+      const phone = btn.dataset.phone;
+      btn.href = `https://wa.me/55${phone}?text=${encodeURIComponent(msg)}`;
+    });
+  </script>
+
+</body>
+</html>
