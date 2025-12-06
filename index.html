@@ -15,15 +15,18 @@
       display: flex;
       justify-content: center;
     }
+.panel {
+  width: 100%;
+  max-width: 720px;
+  background: #000;
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px;
+  padding: 22px;
 
-    .panel {
-      width: 100%;
-      max-width: 720px;
-      background: #000;
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 18px;
-      padding: 22px;
-    }
+  display: flex;              /* ADICIONADO */
+  flex-direction: column;     /* ADICIONADO */
+  align-items: center;        /* ADICIONADO */
+}
 
     /* LOGO */
     
@@ -125,7 +128,6 @@
       <div class="logo-wrap">
         <img src="logo.png" alt="Logo Nanda Jóias">
       </div>
-       </div>
 
     <!-- CONTATOS -->
     <section class="contacts">
