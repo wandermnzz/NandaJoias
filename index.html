@@ -16,21 +16,18 @@
       display: flex;
       justify-content: center;
     }
-.panel {
-  width: 100%;
-  max-width: 720px;
-  background: #000;
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 18px;
-  padding: 22px;
 
-  display: flex;              /* ADICIONADO */
-  flex-direction: column;     /* ADICIONADO */
-  align-items: center;        /* ADICIONADO */
-}
-
-    /* LOGO */
-    
+    .panel {
+      width: 100%;
+      max-width: 720px;
+      background: #000;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 18px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     .logo-wrap {
       width: 140px;
@@ -40,29 +37,19 @@
       justify-content: center;
       overflow: hidden;
       background:transparent;
-      }
+    }
 
     .logo-wrap img {
       width: 100%;
       height: auto;
     }
 
-    h1 {
-      margin: 0;
-      font-size: 22px;
-    }
-
-    .subtitle {
-      font-size: 14px;
-      color: #ccc;
-    }
-
-    /* CONTATOS */
     .contacts {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 14px;
       margin-top: 20px;
+      width: 100%;
     }
 
     .card {
@@ -83,7 +70,7 @@
     }
 
     .note {
-      font-size: 13px;
+      font-size: 13px
       margin-top: 6px;
       color: #ccc;
     }
@@ -120,46 +107,46 @@
         grid-template-columns: 1fr;
       }
     }
+
     .footer {
-  text-align: center;
-  margin-top: 28px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255,255,255,0.15);
-  color: #ccc;
-  font-size: 13px;
-}
+      text-align: center;
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      color: #ccc;
+      font-size: 13px;
+    }
 
-.footer .credit {
-  margin-top: 6px;
-  font-size: 12px;
-  color: rgba(255,255,255,0.45);
-}
+    .footer .credit {
+      margin-top: 6px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+    }
 
-.footer .insta-link {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
+    .footer .insta-link {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
-.footer .insta-link:hover {
-  opacity: 0.7;
-}
+    .footer .insta-link:hover {
+      opacity: 0.7;
+    }
   </style>
 </head>
 
 <body>
   <main class="panel">
 
-      <div class="logo-wrap">
-        <img src="logo.png" alt="Logo Nanda Jóias">
-      </div>
+    <div class="logo-wrap">
+      <img src="logo.png" alt="Logo Nanda Jóias">
+    </div>
 
-    <!-- CONTATOS -->
     <section class="contacts">
 
       <!-- Eduarda -->
       <div class="card">
-        <div class="name">Atendente Eduarda</div>
+        <div class="name">Atendente Eduarda - Shopping Encontro</div>
         <div class="phone">(79) 99960-3905</div>
         <div class="actions">
           <a class="btn btn-wa" href="#" data-phone="79999603905">WhatsApp</a>
@@ -167,19 +154,10 @@
         </div>
       </div>
 
-      <!-- Emilly -->
-      <div class="card">
-        <div class="name">Atendente Emilly</div>
-        <div class="phone">(79) 99966-2154</div>
-        <div class="actions">
-          <a class="btn btn-wa" href="#" data-phone="79999662154">WhatsApp</a>
-          <a class="btn btn-call" href="tel:+557999662154">Ligar</a>
-        </div>
-      </div>
 
       <!-- Roberta -->
       <div class="card">
-        <div class="name">Atendente Roberta</div>
+        <div class="name">Atendente Roberta - Shopping Encontro</div>
         <div class="phone">(79) 9977-4234</div>
         <div class="actions">
           <a class="btn btn-wa" href="#" data-phone="7999774234">WhatsApp</a>
@@ -187,9 +165,20 @@
         </div>
       </div>
 
-      <!-- FERNANDA - DONA -->
+      <!-- Emilly -->
       <div class="card">
-        <div class="name">Fernanda </div>
+        <div class="name">Atendente Emilly - Shopping Box</div>
+        <div class="phone">(79) 99966-2154</div>
+        <div class="actions">
+          <a class="btn btn-wa" href="#" data-phone="79999662154">WhatsApp</a>
+          <a class="btn btn-call" href="tel:+557999662154">Ligar</a>
+        </div>
+      </div>
+
+
+      <!-- Fernanda -->
+      <div class="card">
+        <div class="name">Fernanda</div>
         <div class="phone">(79) 9911-0560</div>
         <div class="note">Dúvidas, reclamações ou sugestões</div>
         <div class="actions">
@@ -197,18 +186,21 @@
           <a class="btn btn-call" href="tel:+5579999110560">Ligar</a>
         </div>
       </div>
-<footer class="footer">
-  <p>© 2025 Nanda Jóias — Todos os direitos reservados.</p>
-  <p class="credit">
-    Desenvolvido por 
-    <a href="https://www.instagram.com/wweb.studio?igsh=OWhsc3VrbXF5Y3dh" 
-       target="_blank" 
-       class="insta-link">
-       @wweb.studio
-    </a>
-  </p>
-</footer>
+
     </section>
+
+    <footer class="footer">
+      <p>© 2025 Nanda Jóias — Todos os direitos reservados.</p>
+      <p class="credit">
+        Desenvolvido por 
+        <a href="https://www.instagram.com/wweb.studio?igsh=OWhsc3VrbXF5Y3dh" 
+           target="_blank" 
+           class="insta-link">
+           @wweb.studio
+        </a>
+      </p>
+    </footer>
+
   </main>
 
   <script>
@@ -219,6 +211,9 @@
       btn.href = `https://wa.me/55${phone}?text=${encodeURIComponent(msg)}`;
     });
   </script>
+
+</body>
+</html>  </script>
 
 </body>
 </html>
